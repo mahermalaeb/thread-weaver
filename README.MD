@@ -7,10 +7,10 @@ Weaver is originally developed by Google Developers here: https://github.com/goo
 This forks updates libraries for Java 8 compatibility and adds mavenization needed for MapDB project.
 
 Examples are here:
-https://github.com/jankotek/thread-weaver/tree/master/main/test/java/examples
+https://github.com/jankotek/thread-weaver/tree/master/src/test/java/examples
 
 Documentation is here
-https://github.com/jankotek/thread-weaver/doc/
+https://code.google.com/p/thread-weaver/wiki/UsersGuide
 
 Maven dependency:
 
