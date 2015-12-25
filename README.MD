@@ -18,6 +18,7 @@ Maven dependency:
             <groupId>org.mapdb</groupId>
             <artifactId>thread-weaver</artifactId>
             <version>3.0.mapdb</version>
+            <scope>test</scope>
         </dependency>
 
 
