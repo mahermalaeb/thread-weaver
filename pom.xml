@@ -6,7 +6,7 @@
     <groupId>org.mapdb</groupId>
     <artifactId>thread-weaver</artifactId>
     <packaging>jar</packaging>
-    <version>3.0.DB-SNAPSHOT</version>
+    <version>3.0.mapdb-SNAPSHOT</version>
     <name>thread-weaver</name>
     <description>Thread-Weaver from Google developers, Mavenized for MapDB.</description>
     <url>https://github.com/jankotek/thread-weaver</url>
