@@ -23,7 +23,9 @@ import com.google.testing.threadtester.SecondaryRunnableImpl;
 import com.google.testing.threadtester.ThreadedTest;
 import com.google.testing.threadtester.ThreadedTestRunner;
 
-import junit.framework.TestCase;
+import org.junit.Test;
+import static org.junit.Assert.*;
+
 
 import java.lang.reflect.Method;
 import java.util.Arrays;
@@ -36,13 +38,14 @@ import java.util.Arrays;
  *
  * @author alasdair.mackintosh@gmail.com (Alasdair Mackintosh)
  */
-public class PlayerTest extends TestCase {
+public class PlayerTest{
 
   private static final String ASSET = "song";
   private static final int TOKEN = 1;
 
   ThreadedTestRunner runner = new ThreadedTestRunner();
 
+  @Test(expected = RuntimeException.class)
   public void testThreadedTests() {
     runner.runTests(getClass(), Player.class);
   }

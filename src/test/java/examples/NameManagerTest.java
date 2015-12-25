@@ -10,10 +10,12 @@ import com.google.testing.threadtester.ThreadedBefore;
 import com.google.testing.threadtester.ThreadedMain;
 import com.google.testing.threadtester.ThreadedSecondary;
 
-import junit.framework.TestCase;
+import org.junit.Test;
+import static org.junit.Assert.*;
 
 import java.util.Arrays;
 import java.util.List;
+
 
 /**
  * Unit test for NameManager. Demonstrates use of
@@ -21,12 +23,13 @@ import java.util.List;
  *
  * @author alasdair.mackintosh@gmail.com (Alasdair Mackintosh)
  */
-public class NameManagerTest extends TestCase {
+public class NameManagerTest{
 
   private static final String HELLO = "Hello";
 
   private volatile NameManager nameManager;
 
+  @Test(expected = RuntimeException.class)
   public void testPutIfAbsent() {
     // Create an AnnotatedTestRunner that will run the threaded tests defined in
     // this class. These tests are expected to makes calls to NameManager.

@@ -12,7 +12,9 @@ import com.google.testing.threadtester.RunResult;
 import com.google.testing.threadtester.SecondaryRunnableImpl;
 import com.google.testing.threadtester.utils.BlockingProxy;
 
-import junit.framework.TestCase;
+import org.junit.Test;
+import static org.junit.Assert.*;
+
 
 import java.util.HashSet;
 import java.util.Set;
@@ -26,7 +28,7 @@ import java.util.Set;
  *
  * @author alasdair.mackintosh@gmail.com (Alasdair Mackintosh)
  */
-public class UserManagerTest extends TestCase {
+public class UserManagerTest{
 
   private static final String USER = "User";
 
@@ -47,6 +49,7 @@ public class UserManagerTest extends TestCase {
     }
   }
 
+  @Test(expected = RuntimeException.class)
   public void testAddUser() {
     // Create a fake DB, and then create a blocking proxy that will block after
     // we have invoked db.userExists()

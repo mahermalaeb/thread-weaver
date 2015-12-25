@@ -14,7 +14,9 @@ import com.google.testing.threadtester.Scripter;
 import com.google.testing.threadtester.ThreadedTest;
 import com.google.testing.threadtester.ThreadedTestRunner;
 
-import junit.framework.TestCase;
+import org.junit.Test;
+import static org.junit.Assert.*;
+
 
 /**
  * Tests {@link Player} using a {@link Script}. This performs the same
@@ -26,13 +28,14 @@ import junit.framework.TestCase;
  *
  * @author alasdair.mackintosh@gmail.com (Alasdair Mackintosh)
  */
-public class PlayerTestUsingScript extends TestCase {
+public class PlayerTestUsingScript{
 
   private static final String ASSET = "song";
   private static final int TOKEN = 1;
 
   ThreadedTestRunner runner = new ThreadedTestRunner();
 
+  @Test(expected = RuntimeException.class)
   public void testThreadedTests() {
     runner.runTests(getClass(), Player.class);
   }

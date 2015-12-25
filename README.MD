@@ -1,3 +1,29 @@
+Thread Weaver is test framework for testing concurrent code.
+It inserts breakpoints into code, and tests all execution combinations for possible race conditions.
+
+It is well explained in this talk: https://vimeo.com/105758363 and slides: http://www.slideshare.net/RafaelWinterhalter/unit-testing-concurrent-code
+
+Weaver is originally developed by Google Developers here: https://github.com/google/thread-weaver
+This forks updates libraries for Java 8 compatibility and adds mavenization needed for MapDB project.
+
+Examples are here:
+https://github.com/jankotek/thread-weaver/tree/master/main/test/java/examples
+
+Documentation is here
+https://github.com/jankotek/thread-weaver/doc/
+
+Maven dependency:
+
+        <dependency>
+            <groupId>org.mapdb</groupId>
+            <artifactId>thread-weaver</artifactId>
+            <version>3.0.mapdb</version>
+        </dependency>
+
+
+Original readme
+----------------
+
 This is Weaver, a framework for writing multi-threaded Unit Tests in
 Java.
 

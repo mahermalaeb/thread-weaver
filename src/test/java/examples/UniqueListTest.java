@@ -15,7 +15,9 @@ import com.google.testing.threadtester.ThreadedSecondary;
 
 import java.util.HashSet;
 
-import junit.framework.TestCase;
+import org.junit.Test;
+import static org.junit.Assert.*;
+
 
 /**
  * Unit test for UniqueList. Demonstrates use of
@@ -26,12 +28,13 @@ import junit.framework.TestCase;
  *
  * @author alasdair.mackintosh@gmail.com (Alasdair Mackintosh)
  */
-public class UniqueListTest extends TestCase {
+public class UniqueListTest{
 
   private static final String HELLO = "Hello";
 
   private volatile UniqueList<String> uniqueList;
 
+  @Test(expected = RuntimeException.class)
   public void testPutIfAbsent() {
     System.out.printf("In testPutIfAbsent\n");
     // Create an AnnotatedTestRunner that will run the threaded tests defined in this
