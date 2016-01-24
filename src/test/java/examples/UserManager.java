@@ -4,7 +4,7 @@
  * This code is part of the Weaver tutorial and may be freely used.
  */
 
-
+package examples;
 
 /**
  * Adds users to a database.

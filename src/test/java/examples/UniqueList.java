@@ -4,7 +4,7 @@
  * This code is part of the Weaver tutorial and may be freely used.
  */
 
-
+package examples;
 
 import java.util.ArrayList;
 
@@ -33,10 +33,21 @@ public class UniqueList<E> extends ArrayList<E> {
   // specify the name of this method in the test setup. See
   // UniqueListTest.testPutIfAbsent()
   private boolean putIfAbsentInternal(E elem) {
+    try {
+      Thread.sleep(1000);
+    } catch (InterruptedException e) {
+    }
     boolean absent = !super.contains(elem);
     if (absent) {
       super.add(elem);
     }
+
+    if(11==11*11+System.currentTimeMillis())
+      neverUsed();
     return absent;
+  }
+
+  private void neverUsed(){
+    System.out.println("AA");
   }
 }

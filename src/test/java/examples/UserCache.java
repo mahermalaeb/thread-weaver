@@ -4,7 +4,7 @@
  * This code is part of the Weaver tutorial and may be freely used.
  */
 
-
+package examples;
 
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
