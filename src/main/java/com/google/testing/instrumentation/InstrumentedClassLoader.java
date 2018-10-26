@@ -44,7 +44,8 @@ public final class InstrumentedClassLoader extends ClassLoader {
   /* Note - we run into various obscure errors with on-the-fly classes if we try
    * to load sun packages, so delegate these to the parent class loader. Also
    * delegate java and javax packages, on the assumption that we don't want to
-   * instrument these.
+   * instrument these. After JDK9 we also need to delegate jdk.internal.reflect
+   * to the parent class loader.
    *
    * We also exclude classes from the JUnit and EasyMock test frameworks, from
    * Objenesis, and from org.w3c.dom, on the grounds that we are not likely to
@@ -55,7 +56,7 @@ public final class InstrumentedClassLoader extends ClassLoader {
    * callers specify this.
    */
   private static final List<String> excludedClassPrefixes =
-      Arrays.asList("java.", "javax.", "sun.", "net.sf.cglib", "junit.",
+      Arrays.asList("java.", "javax.", "sun.", "jdk.internal.reflect", "net.sf.cglib", "junit.",
           "org.junit.", "org.objenesis.", "org.easymock.", "org.w3c.dom", "org.jdom");
 
   /**

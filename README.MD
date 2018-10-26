@@ -4,7 +4,7 @@ It inserts breakpoints into code, and tests all execution combinations for possi
 It is well explained in this talk: https://vimeo.com/105758363 and slides: http://www.slideshare.net/RafaelWinterhalter/unit-testing-concurrent-code
 
 Weaver is originally developed by Google Developers here: https://github.com/google/thread-weaver
-This forks updates libraries for Java 8 compatibility and adds mavenization needed for MapDB project.
+This forks updates libraries for Java 11 compatibility and adds mavenization needed for MapDB project.
 
 Examples are here:
 https://github.com/jankotek/thread-weaver/tree/master/src/test/java/examples
